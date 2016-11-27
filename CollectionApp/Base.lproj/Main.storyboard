@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,20 +33,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-Ts-46S">
-                                            <rect key="frame" x="2" y="2" width="95" height="95"/>
+                                            <rect key="frame" x="8" y="8" width="83" height="83"/>
                                             <color key="backgroundColor" red="0.07415502518415451" green="0.78141754865646362" blue="0.80450445413589478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euz-bK-0hx">
+                                            <rect key="frame" x="8" y="70" width="83" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="vV8-Ts-46S" firstAttribute="leading" secondItem="WlI-sS-ZYJ" secondAttribute="leading" constant="2" id="VLT-pr-zpH"/>
-                                    <constraint firstItem="vV8-Ts-46S" firstAttribute="top" secondItem="WlI-sS-ZYJ" secondAttribute="top" constant="2" id="Zwp-uY-FsK"/>
-                                    <constraint firstAttribute="trailing" secondItem="vV8-Ts-46S" secondAttribute="trailing" constant="2" id="edX-Vl-QPp"/>
-                                    <constraint firstAttribute="bottom" secondItem="vV8-Ts-46S" secondAttribute="bottom" constant="2" id="q20-8t-RP3"/>
+                                    <constraint firstItem="euz-bK-0hx" firstAttribute="leading" secondItem="vV8-Ts-46S" secondAttribute="leading" id="Leh-ys-Igf"/>
+                                    <constraint firstItem="euz-bK-0hx" firstAttribute="trailing" secondItem="WlI-sS-ZYJ" secondAttribute="trailingMargin" id="MSa-Lv-Bd1"/>
+                                    <constraint firstItem="vV8-Ts-46S" firstAttribute="centerY" secondItem="WlI-sS-ZYJ" secondAttribute="centerY" id="Tnv-FZ-fcm"/>
+                                    <constraint firstItem="euz-bK-0hx" firstAttribute="leading" secondItem="WlI-sS-ZYJ" secondAttribute="leadingMargin" id="dBY-Ji-5Ig"/>
+                                    <constraint firstItem="euz-bK-0hx" firstAttribute="trailing" secondItem="vV8-Ts-46S" secondAttribute="trailing" id="mAn-T6-jwF"/>
+                                    <constraint firstItem="euz-bK-0hx" firstAttribute="bottom" secondItem="vV8-Ts-46S" secondAttribute="bottom" id="u5X-wA-Inq"/>
+                                    <constraint firstItem="euz-bK-0hx" firstAttribute="bottom" secondItem="WlI-sS-ZYJ" secondAttribute="bottomMargin" id="xOq-t5-kyX"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataItemImageView" destination="vV8-Ts-46S" id="0BW-nH-S2e"/>
+                                    <outlet property="labelview" destination="euz-bK-0hx" id="Zzg-at-Z38"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -55,13 +65,16 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="5R6-aM-dT3">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="cjC-WH-E8T"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="biu-zb-0vW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="biu-zb-0vW">
+                            <connections>
+                                <action selector="addButton:" destination="ySs-wB-QX6" id="PHM-F1-DIv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFj-2h-Nh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="164.16791604197903"/>
+            <point key="canvasLocation" x="549.60000000000002" y="163.26836581709148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rie-Ku-XvK">

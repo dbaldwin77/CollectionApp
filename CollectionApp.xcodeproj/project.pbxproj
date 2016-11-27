@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BB485311DEA992A00A0802F /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB485301DEA992A00A0802F /* Header.swift */; };
 		8BF62D4B1DE920B100682DAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF62D4A1DE920B100682DAA /* AppDelegate.swift */; };
 		8BF62D501DE920B200682DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BF62D4E1DE920B200682DAA /* Main.storyboard */; };
 		8BF62D521DE920B300682DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF62D511DE920B300682DAA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BB485301DEA992A00A0802F /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		8BF62D471DE920B100682DAA /* CollectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BF62D4A1DE920B100682DAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BF62D4F1DE920B200682DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8BF62D4A1DE920B100682DAA /* AppDelegate.swift */,
 				8BFC01381DE947F3008BD191 /* spaceCollectionViewController.swift */,
 				8BF62D5E1DE9369600682DAA /* dataItems.swift */,
+				8BB485301DEA992A00A0802F /* Header.swift */,
 				8BF62D601DE938B900682DAA /* dataSource.swift */,
 				8BF62D4E1DE920B200682DAA /* Main.storyboard */,
 				8BF62D511DE920B300682DAA /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB485311DEA992A00A0802F /* Header.swift in Sources */,
 				8BFC01391DE947F3008BD191 /* spaceCollectionViewController.swift in Sources */,
 				8BF62D4B1DE920B100682DAA /* AppDelegate.swift in Sources */,
 				8BF62D611DE938B900682DAA /* dataSource.swift in Sources */,

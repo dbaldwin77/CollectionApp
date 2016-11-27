@@ -12,6 +12,8 @@ class DataItemCell: UICollectionViewCell {
     
     @IBOutlet private weak var dataItemImageView: UIImageView!
     
+    @IBOutlet weak var labelview: UILabel!
+    
     var dataItem: dataItem? {
         didSet {
             if let dataItem = dataItem {
@@ -19,5 +21,4 @@ class DataItemCell: UICollectionViewCell {
             }
         }
     }
-    
 }
