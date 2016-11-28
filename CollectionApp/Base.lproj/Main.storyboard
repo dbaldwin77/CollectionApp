@@ -14,7 +14,7 @@
         <scene sceneID="Gn9-KL-pG0">
             <objects>
                 <collectionViewController id="ySs-wB-QX6" customClass="spaceCollectionViewController" customModule="CollectionApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Mm-N8-PY3">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="5Mm-N8-PY3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,6 +42,13 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="zwa-ha-qbH">
+                                            <rect key="frame" x="58" y="69" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="ijf-ny-52b"/>
+                                                <constraint firstAttribute="width" constant="20" id="zol-ic-1KD"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
@@ -49,13 +56,16 @@
                                     <constraint firstItem="euz-bK-0hx" firstAttribute="trailing" secondItem="WlI-sS-ZYJ" secondAttribute="trailingMargin" id="MSa-Lv-Bd1"/>
                                     <constraint firstItem="vV8-Ts-46S" firstAttribute="centerY" secondItem="WlI-sS-ZYJ" secondAttribute="centerY" id="Tnv-FZ-fcm"/>
                                     <constraint firstItem="euz-bK-0hx" firstAttribute="leading" secondItem="WlI-sS-ZYJ" secondAttribute="leadingMargin" id="dBY-Ji-5Ig"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="zwa-ha-qbH" secondAttribute="bottom" constant="2" id="jzG-oi-xO9"/>
                                     <constraint firstItem="euz-bK-0hx" firstAttribute="trailing" secondItem="vV8-Ts-46S" secondAttribute="trailing" id="mAn-T6-jwF"/>
+                                    <constraint firstItem="zwa-ha-qbH" firstAttribute="leading" secondItem="WlI-sS-ZYJ" secondAttribute="leadingMargin" constant="50" id="qqc-e5-Fc5"/>
                                     <constraint firstItem="euz-bK-0hx" firstAttribute="bottom" secondItem="vV8-Ts-46S" secondAttribute="bottom" id="u5X-wA-Inq"/>
                                     <constraint firstItem="euz-bK-0hx" firstAttribute="bottom" secondItem="WlI-sS-ZYJ" secondAttribute="bottomMargin" id="xOq-t5-kyX"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataItemImageView" destination="vV8-Ts-46S" id="0BW-nH-S2e"/>
                                     <outlet property="labelview" destination="euz-bK-0hx" id="Zzg-at-Z38"/>
+                                    <outlet property="uncheckedRadio" destination="zwa-ha-qbH" id="Xph-jY-gQG"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -64,6 +74,15 @@
                             <outlet property="delegate" destination="ySs-wB-QX6" id="Yd3-58-WeZ"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Viv-A0-bur"/>
+                        <barButtonItem systemItem="trash" id="rMH-9c-UFm">
+                            <connections>
+                                <action selector="deleteButton:" destination="ySs-wB-QX6" id="5oM-3H-8ZN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="b0c-dI-aQo"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="5R6-aM-dT3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="biu-zb-0vW">
                             <connections>
@@ -71,6 +90,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addbutton" destination="biu-zb-0vW" id="9t0-Se-WxZ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFj-2h-Nh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,4 +118,7 @@
             <point key="canvasLocation" x="-151.19999999999999" y="164.16791604197903"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="unchecked" width="75" height="75"/>
+    </resources>
 </document>
