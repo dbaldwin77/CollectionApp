@@ -108,4 +108,6 @@ class spaceCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
        
     }
+ 
+    
  }
