@@ -67,15 +67,15 @@ class spaceCollectionViewController: UICollectionViewController {
     
     @IBAction func deleteButton(_ sender: UIBarButtonItem) {
      
-        let indexPaths = collectionView?.indexPathsForSelectedItems!
-        if let indexPaths = indexPaths {
-            
-       //     spaceItems.remove(at: indexPaths)
+        let indexPaths = collectionView!.indexPathsForSelectedItems!
         
-        collectionView?.deleteItems(at: indexPaths)
+          spaceItems.remove(at: 0)
+        
+        
+        collectionView?.deleteItems(at: indexPaths as [IndexPath])
      
-        }
-        print("error deleting")
+    
+     
     }
     
     
@@ -99,15 +99,24 @@ class spaceCollectionViewController: UICollectionViewController {
         }
         
         if !editing {
-            navigationController!.setToolbarHidden(true, animated: false)
-        } else {
-            navigationController!.setToolbarHidden(false, animated: true)
+            navigationController!.setToolbarHidden(true, animated: animated)
         }
     }
     
     override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
        
     }
- 
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if isEditing {
+        navigationController!.setToolbarHidden(false, animated: true)
+        }
+    }
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if isEditing {
+            if collectionView.indexPathsForSelectedItems?.count == 0 {
+                
+            navigationController?.setToolbarHidden(true, animated: true)
+            }
+        }
+    }
  }

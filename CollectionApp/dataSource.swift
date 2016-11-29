@@ -32,7 +32,7 @@ class DataItemCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if editing {
-                uncheckedRadio.image = UIImage(named: isSelected ? "unchecked" : "checked")
+                uncheckedRadio.image = UIImage(named: isSelected ? "checked" : "unchecked")
             }
         }
     }
